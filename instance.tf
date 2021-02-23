@@ -11,7 +11,7 @@ resource "aws_instance" "redhat" {
     connection {
     type     = "ssh"
     user     = "ec2-user"
-    private_key = "/home/valeriy/.ssh/aws.pem"
+    private_key = file("/home/valeriy/.ssh/aws.pem")
     host     = aws_instance.redhat.public_ip
   }
     
