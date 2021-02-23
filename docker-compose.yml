@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+
+   wordpress:
+     image: wordpress:latest
+     ports:
+       - "80:80"
+     restart: always
