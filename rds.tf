@@ -6,8 +6,11 @@ resource "aws_db_instance" "default" {
   name                 = "wp"
   username             = "admin"
   password             = "12345qwerty"
+  identifier = "db-wp"
   skip_final_snapshot  = true
   vpc_security_group_ids = [aws_security_group.allow_22_80_3306.id]
+  db_subnet_group_name = aws_db_subnet_group.default.id
+
 
 }
 
