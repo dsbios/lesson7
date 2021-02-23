@@ -22,3 +22,8 @@ resource "aws_db_subnet_group" "default" {
     Name = "My DB subnet group"
   }
 }
+
+output "DB" {
+  value = aws_db_instance.default.endpoint
+
+}
